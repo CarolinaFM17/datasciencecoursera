@@ -8,7 +8,7 @@ El objetivo de esta guía es brindar instrucciones sobre la mejor manera de comp
 
 Considero fundamental que los estadísticos puedan manejar los datos en cualquier estado en que los reciban. Es importante visualizar los datos brutos, comprender los pasos del proceso y poder incorporar fuentes ocultas de variabilidad en el análisis. Por otro lado, para muchos tipos de datos, los pasos de procesamiento están bien documentados y estandarizados. Por lo tanto, la conversión de los datos brutos a un formato directamente analizable puede realizarse antes de consultar con un estadístico. Esto puede agilizar considerablemente el tiempo de respuesta, ya que el estadístico no tiene que realizar previamente todos los pasos de preprocesamiento.
 
-### Lo que debes entregarle al estadístico
+# Lo que debes entregarle al estadístico
 Para facilitar un análisis más eficiente y oportuno, esta es la información que debe proporcionar a un estadístico:
 
 1. Los datos brutos.
@@ -19,7 +19,7 @@ Para facilitar un análisis más eficiente y oportuno, esta es la información q
 
 Analicemos cada parte del paquete de datos que transferirá.
 
-# Los datos brutos
+### Los datos brutos
 Es fundamental que incluyas los datos en su formato original al que tengas acceso. Esto garantiza que se pueda mantener la trazabilidad de los datos a lo largo de todo el flujo de trabajo. A continuación, se muestran algunos ejemplos de datos en formato original:
 
 - El extraño archivo binario que genera su máquina de medición
@@ -42,7 +42,7 @@ Sabrás que los datos brutos están en el formato correcto si:
 
 Si modificaste los datos originales, estos ya no se encuentran en su formato original. Presentar datos modificados como si fueran datos originales es una práctica común que ralentiza el análisis, ya que el analista a menudo tendrá que realizar un estudio forense para determinar por qué los datos originales parecen extraños. (¿Y qué pasaría si llegaran nuevos datos?)
 
-# El conjunto de datos ordenado
+### El conjunto de datos ordenado
 Hadley Wickham expone los principios generales de los datos ordenados en este artículo y en este vídeo . Si bien tanto el artículo como el vídeo describen los datos ordenados utilizando R , los principios son de aplicación más general:
 
 1. Cada variable que midas debe estar en una columna.
@@ -59,7 +59,7 @@ Aquí hay un ejemplo de cómo funcionaría esto en genómica. Supongamos que par
 
 Si comparte sus datos con el colaborador en Excel, los datos deben estar en un archivo de Excel por tabla. No deben contener varias hojas de cálculo, ni macros aplicadas, ni columnas o celdas resaltadas. Como alternativa, puede compartir los datos en un archivo CSV o de texto delimitado por tabulaciones . (Tenga en cuenta que la lectura de archivos CSV en Excel a veces puede provocar errores en el manejo de las variables de fecha y hora).
 
-# El libro de códigos
+### El libro de códigos
 Para casi cualquier conjunto de datos, las mediciones que calcule deberán describirse con más detalle del que puede o debe incluir en la hoja de cálculo. El libro de códigos contiene esta información. Como mínimo, debe contener:
 
 1. Información sobre las variables (¡incluidas las unidades!) en el conjunto de datos que no está contenida en los datos ordenados.
@@ -72,7 +72,7 @@ En nuestro ejemplo de genómica, el analista querría saber cuál es la unidad d
 
 Un formato común para este documento es un archivo de Word. Debe incluir una sección titulada "Diseño del estudio" con una descripción detallada de cómo se recopilaron los datos. También debe haber una sección llamada "Libro de códigos" que describa cada variable y sus unidades.
 
-# Cómo codificar variables
+### Cómo codificar variables
 Cuando introduces variables en una hoja de cálculo, te encontrarás con varias categorías principales dependiendo de su tipo de datos :
 
 1. Continuo
@@ -91,7 +91,7 @@ En general, evite codificar las variables categóricas u ordinales como números
 
 Codifique siempre toda la información sobre sus observaciones mediante texto. Por ejemplo, si almacena datos en Excel y utiliza texto de color o formato de fondo de celda para indicar información sobre una observación («Se observaron entradas de variables rojas en el experimento 1»), esta información no se exportará (¡y se perderá!) al exportar los datos como texto sin formato. Todos los datos deben codificarse como texto que pueda exportarse.
 
-# La lista/guion de instrucciones
+### La lista/guion de instrucciones
 Quizás ya lo hayas oído, pero la reproducibilidad es fundamental en la ciencia computacional . Esto significa que, al enviar tu artículo, los revisores y el resto de la comunidad científica deben poder replicar con exactitud los análisis, desde los datos brutos hasta los resultados finales. Si buscas la eficiencia, probablemente realizarás algunos pasos de resumen y análisis de datos antes de que estos se consideren ordenados.
 
 Lo ideal para realizar un resumen es crear un script informático (en R, Python, o cualquier otro lenguaje) que tome los datos sin procesar como entrada y genere los datos ordenados que deseas compartir como salida. Puedes ejecutar el script varias veces para comprobar si el código produce el mismo resultado.
@@ -106,7 +106,7 @@ En muchos casos, la persona que recopiló los datos tiene incentivos para facili
 
 También debes incluir información sobre el sistema operativo (Mac/Windows/Linux) en el que utilizaste el software y si lo probaste más de una vez para confirmar que obtuviste los mismos resultados. Lo ideal es que se lo muestres a un compañero de clase o de laboratorio para confirmar que puede obtener el mismo archivo de salida que tú.
 
-### Qué debes esperar del analista
+# Qué debes esperar del analista
 Al entregar un conjunto de datos debidamente organizado, se reduce drásticamente la carga de trabajo del estadístico. Por lo tanto, es de esperar que le respondan mucho antes. Sin embargo, la mayoría de los estadísticos meticulosos revisarán su procedimiento, harán preguntas sobre los pasos que realizó e intentarán confirmar que pueden obtener los mismos datos organizados que usted, al menos mediante verificaciones puntuales.
 
 Entonces, lo que se puede esperar del estadístico es lo siguiente:
@@ -119,7 +119,7 @@ Entonces, lo que se puede esperar del estadístico es lo siguiente:
 
 Esta es la información que utilizará en el suplemento para demostrar la reproducibilidad y precisión de sus resultados. Cada paso del análisis debe explicarse claramente y debe hacer preguntas cuando no entienda lo que hizo el analista. Es responsabilidad tanto del estadístico como del científico comprender el análisis estadístico. Es posible que no pueda realizar los análisis exactos sin el código del estadístico, pero debe poder explicar a un compañero de laboratorio o a su investigador principal por qué el estadístico realizó cada paso.
 
-### Colaboradores
+# Colaboradores
 - Jeff Leek - Escribió la versión inicial.
 
 - L. Collado-Torres - Se corrigieron errores tipográficos y se agregaron enlaces.
