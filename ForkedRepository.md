@@ -1,4 +1,4 @@
-### Cómo compartir datos con un estadístico
+# Cómo compartir datos con un estadístico
 Esta es una guía para cualquier persona que necesite compartir datos con un estadístico o científico de datos. El público objetivo al que me dirijo es:
 
 - Colaboradores que necesitan estadísticos o científicos de datos para analizar los datos por ellos.
