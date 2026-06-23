@@ -127,7 +127,3 @@ Esta es la información que utilizará en el suplemento para demostrar la reprod
 - Nick Reich - Añadió consejos sobre cómo almacenar datos como texto.
 
 - Nick Horton - Sugerencias menores de redacción.
-
-Paso 2: ejecute el software por separado para cada muestra.
-Paso 3: tome la tercera columna del archivo outputfile.out para cada muestra y esa será la fila correspondiente en el conjunto de datos de salida.
-También debes incluir información sobre el sistema operativo (Mac/Windows/Linux) en el que utilizaste el software y si lo probaste más de una vez para confirmar que obtuviste los mismos resultados. Lo ideal es que se lo muestres a un compañero de clase o de laboratorio para confirmar que puede obtener el mismo archivo de salida que tú.
